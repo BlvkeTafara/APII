@@ -1,14 +1,32 @@
 ﻿using System;
-
-namespace CsharpPlayground
+public interface IDrawable
 {
-    class Program
+    void draw();
+}
+public class Rectangle : IDrawable
+{
+    public void draw()
     {
-        static void Main(string[] args)
-        {
-
-            //new code
-            Console.WriteLine("Hello World!");
-        }
+        Console.WriteLine("Drawing Rectangle...");
     }
 }
+public class Circle : IDrawable
+{
+    public void draw()
+    {
+        Console.WriteLine("Drawing Circle...");
+    }
+}
+public class Test
+{
+    public static void main()
+    {
+        IDrawable d;
+        d = new Rectangle();
+        d.draw();
+        d = new Circle();
+        d.draw();
+
+    }
+}
+
