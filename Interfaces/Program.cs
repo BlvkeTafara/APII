@@ -27,7 +27,7 @@ namespace Interfaces
             {
                 Console.WriteLine(name + "equipped");
             }
-            public void sell ()
+            public void Sell ()
             {
                 Console.WriteLine(name + "sold for" + goldvalue + "imaginary dollars");
             }
@@ -36,7 +36,7 @@ namespace Interfaces
         {
             Sword sword = new Sword("Sword of destiny");
             sword.Equip();
-            sword.sell();
+            sword.Sell();
             Console.ReadKey();
         }
     }
